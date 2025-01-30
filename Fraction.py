@@ -11,12 +11,10 @@ class Fraction(object):
             if not isinstance(numerator, int) or not isinstance(denominator, int):
                 self.valid = False
 
+            else:
+                self.numerator = numerator
+                self.denominator = denominator
         
-        # if not isinstance(numerator, int) and not isinstance(denominator, int):
-        #     raise TypeError
-        
-        self.numerator = numerator
-        self.denominator = denominator
         self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
 
     def gcd(a, b): 
