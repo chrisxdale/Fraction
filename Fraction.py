@@ -12,8 +12,8 @@ class Fraction(object):
                 if not numbers[0].strip("-").isnumeric() or not numbers[1].strip("-").isnumeric():
                     self.valid = False
                 else:
-                    self.numerator = numerator
-                    self.denominator = denominator
+                    self.numerator = int(numbers[0])
+                    self.denominator = int(numbers[1])
 
                     if self.denominator == 0:
                         self.valid = False
