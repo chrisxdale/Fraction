@@ -1,9 +1,19 @@
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
-        #TODO
-        if not isinstance(numerator, int) and not isinstance(denominator, int):
-            raise TypeError
+
+        self.valid = True
+
+        #if the given is a string fraction already
+        if isinstance(numerator, str):
+            pass
+        else:
+            if not isinstance(numerator, int) or not isinstance(denominator, int):
+                self.valid = False
+
+        
+        # if not isinstance(numerator, int) and not isinstance(denominator, int):
+        #     raise TypeError
         
         self.numerator = numerator
         self.denominator = denominator
