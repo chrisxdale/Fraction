@@ -7,6 +7,7 @@ class Fraction(object):
         
         self.numerator = numerator
         self.denominator = denominator
+        self.greatest_common_divisor = gcd(self.numerator, self.denominator)
 
     def gcd(a, b):
 
@@ -27,7 +28,7 @@ class Fraction(object):
     def get_denominator(self):
         
         return str( self.denominator / self.gcd() )
-``
+    
     def get_fraction(self):
         if self.get_denominator() == "1":
             return self.get_numerator()
