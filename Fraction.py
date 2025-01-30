@@ -1,3 +1,11 @@
+"""
+This is a Fraction Module
+
+This module implements functions that gets the numerator, denominator, and
+the lowest term fraction from a given fraction or creates a fraction given
+two integers
+"""
+
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
