@@ -14,7 +14,11 @@ class Fraction(object):
             else:
                 self.numerator = numerator
                 self.denominator = denominator
-                
+
+                if self.denominator == 0:
+                    self.valid = False
+                    raise ZeroDivisionError
+                    
         if self.valid:
             self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
 
