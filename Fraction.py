@@ -4,6 +4,9 @@ class Fraction(object):
         #TODO
         if not isinstance(numerator, int) and not isinstance(denominator, int):
             raise TypeError
+        
+        self.numerator = numerator
+        self.denominator = denominator
 
     def gcd(a, b):
 
@@ -18,8 +21,8 @@ class Fraction(object):
         return Fraction.gcd(a, b % a)
 
     def get_numerator(self):
-        #TODO
-        pass
+        
+        return str( self.numerator / self.gcd() )
 
     def get_denominator(self):
         #TODO
