@@ -35,6 +35,8 @@ class Fraction(object):
         return str( self.numerator // self.greatest_common_divisor)
 
     def get_denominator(self):
+        if not self.valid or self.greatest_common_divisor == 0:
+            return "0"
         
         return str( self.denominator // self.greatest_common_divisor)
     
