@@ -11,11 +11,11 @@ class Fraction(object):
 
     def gcd(a, b): 
 
-        if a == 0 and b == 0:
+        if a == 0 or b == 0:
             return 0
 
-        if b == 0:
-            return a
+        if a % b == 0:
+            return b
         
         return Fraction.gcd(b, a % b)
 
