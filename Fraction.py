@@ -7,6 +7,11 @@ class Fraction(object):
         #if the given is a string fraction already
         if isinstance(numerator, str):
             numbers = numerator.strip().split("/")
+
+            if len(numbers) == 2:
+                pass
+            else:
+                self.valid = False
         else:
             if not isinstance(numerator, int) or not isinstance(denominator, int):
                 self.valid = False
