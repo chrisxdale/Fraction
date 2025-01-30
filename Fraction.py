@@ -58,6 +58,12 @@ class Fraction(object):
         return str( self.numerator // self.greatest_common_divisor)
 
     def get_denominator(self):
+        '''     
+        @fn get_denominator
+        @brief Returns 0 if the Fraction is not valid or if the greatest_common_divisor
+        is 0 else returns the lowest form of the denominator
+
+        '''
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
         
