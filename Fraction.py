@@ -43,5 +43,9 @@ class Fraction(object):
             
         if self.denominator < 0:
             if self.numerator > 0:
-                return "-" + self.get_numerator() + "/" + self.get_denominator()[1:]
-        return self.get_numerator() + "/" + self.get_denominator()
+                str_denominator = str_denominator[1:]
+                str_numerator = "-" + str_numerator
+            else:
+                str_numerator = str_numerator[1:]
+                
+        return str_numerator + "/" + str_denominator
