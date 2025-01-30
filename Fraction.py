@@ -40,6 +40,11 @@ class Fraction(object):
         
         if str_numerator == "0":
             return "0"
+        
+        if str_denominator == "-1":
+            if int(str_numerator) < 0:
+                return str_numerator[1:]
+            return "-" + str_numerator
             
         if int(str_denominator) < 0:
             if int(str_numerator) > 0:
