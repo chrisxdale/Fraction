@@ -25,7 +25,7 @@ class Fraction(object):
 
     def get_denominator(self):
         
-        return str( self.denominator / self.greatest_common_divisor)
+        return str( self.denominator // self.greatest_common_divisor)
     
     def get_fraction(self):
         
