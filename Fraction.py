@@ -29,6 +29,9 @@ class Fraction(object):
     
     def get_fraction(self):
         
+        if self.denominator == 0:
+            return "0"
+        
         str_numerator = self.get_numerator()
         str_denominator = self.get_denominator()
         
