@@ -39,6 +39,8 @@ class Fraction(object):
         '''     
         @fn gcd
         @brief returns the greatest common denominator of the two numbers
+        @param a numerator
+        @param b denominator
 
         ''' 
 
