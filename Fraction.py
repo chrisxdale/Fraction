@@ -37,6 +37,9 @@ class Fraction(object):
         
         if str_denominator == "1":
             return str_numerator
+        
+        if str_numerator == "0":
+            return "0"
             
         if self.denominator < 0:
             if self.numerator > 0:
