@@ -41,8 +41,8 @@ class Fraction(object):
         return str( self.denominator // self.greatest_common_divisor)
     
     def get_fraction(self):
-        
-        if self.denominator == 0:
+
+        if not self.valid:
             return "0"
         
         str_numerator = self.get_numerator()
