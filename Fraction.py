@@ -35,7 +35,12 @@ class Fraction(object):
         if self.valid:
             self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
 
-    def gcd(a, b): 
+    def gcd(a, b):
+        '''     
+        @fn gcd
+        @brief returns the greatest common denominator of the two numbers
+
+        ''' 
 
         if a == 0 or b == 0:
             return 0
@@ -46,19 +51,37 @@ class Fraction(object):
         return Fraction.gcd(b, a % b)
 
     def get_numerator(self):
+        '''     
+        @fn get_numerator
+        @brief Returns 0 if the Fraction is not valid or if the greatest_common_divisor
+        is 0 else returns the lowest form of the numerator
+
+        '''
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
         
         return str( self.numerator // self.greatest_common_divisor)
 
     def get_denominator(self):
+        '''     
+        @fn get_denominator
+        @brief Returns 0 if the Fraction is not valid or if the greatest_common_divisor
+        is 0 else returns the lowest form of the denominator
+
+        '''
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
         
         return str( self.denominator // self.greatest_common_divisor)
     
     def get_fraction(self):
+        '''     
+        @fn get_fraction
+        @brief Returns 0 if the Fraction is not valid. Returns the fraction in its lowest form
+        with consideration of negative numerators and denominators in the format:
+        numerator / denominator
 
+        '''
         if not self.valid:
             return "0"
         
