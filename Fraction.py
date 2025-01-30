@@ -1,3 +1,33 @@
+# Gregorio Delfin P. Pascua
+# 234835
+#
+# Antonth Chrisdale C. Lopez 
+# 233714
+#
+# January 30, 2025
+#
+# We hereby attest to the truth of the following facts:
+#
+# We have not discussed the Python language code in our program
+# with anyone other than our instructor or the teaching assistants
+# assigned to this course.
+#
+# We have not used Python language code obtained from another student,
+# or any other unauthorized source, either modified or unmodified.
+#
+# If any Python language code or documentation used in our program
+# was obtained from another source, such as a textbook or website,
+# that has been clearly noted with a proper citation in the comments
+# of our program.
+
+"""
+This is a Fraction Module
+
+This module implements functions that gets the numerator, denominator, and
+the lowest term fraction from a given fraction or creates a fraction given
+two integers
+"""
+
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
@@ -39,6 +69,8 @@ class Fraction(object):
         '''     
         @fn gcd
         @brief returns the greatest common denominator of the two numbers
+        @param a numerator
+        @param b denominator
 
         ''' 
 
