@@ -30,4 +30,7 @@ class Fraction(object):
     def get_fraction(self):
         if self.get_denominator() == "1":
             return self.get_numerator()
+        if self.denominator < 0:
+            if self.numerator > 0:
+                return "-" + self.get_numerator() + "/" + self.get_denominator()[1:]
         return self.get_numerator() + "/" + self.get_denominator()
