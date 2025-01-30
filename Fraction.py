@@ -14,8 +14,9 @@ class Fraction(object):
             else:
                 self.numerator = numerator
                 self.denominator = denominator
-        
-        self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
+                
+        if self.valid:
+            self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
 
     def gcd(a, b): 
 
