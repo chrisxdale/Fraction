@@ -12,7 +12,12 @@ class Fraction(object):
                 if not numbers[0].strip("-").isnumeric() or not numbers[1].strip("-").isnumeric():
                     self.valid = False
                 else:
-                    pass
+                    self.numerator = numerator
+                    self.denominator = denominator
+
+                    if self.denominator == 0:
+                        self.valid = False
+                        raise ZeroDivisionError
             else:
                 self.valid = False
         else:
