@@ -6,7 +6,7 @@ class Fraction(object):
 
         #if the given is a string fraction already
         if isinstance(numerator, str):
-            pass
+            numbers = numerator.strip().split("/")
         else:
             if not isinstance(numerator, int) or not isinstance(denominator, int):
                 self.valid = False
@@ -18,7 +18,7 @@ class Fraction(object):
                 if self.denominator == 0:
                     self.valid = False
                     raise ZeroDivisionError
-                    
+
         if self.valid:
             self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
 
