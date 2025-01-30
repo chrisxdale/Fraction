@@ -29,6 +29,8 @@ class Fraction(object):
         return Fraction.gcd(b, a % b)
 
     def get_numerator(self):
+        if not self.valid or self.greatest_common_divisor == 0:
+            return "0"
         
         return str( self.numerator // self.greatest_common_divisor)
 
