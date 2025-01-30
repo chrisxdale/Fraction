@@ -70,7 +70,13 @@ class Fraction(object):
         return str( self.denominator // self.greatest_common_divisor)
     
     def get_fraction(self):
-        
+        '''     
+        @fn get_fraction
+        @brief Returns 0 if the Fraction is not valid. Returns the fraction in its lowest form
+        with consideration of negative numerators and denominators in the format:
+        numerator / denominator
+
+        '''
         if not self.valid:
             return "0"
         
