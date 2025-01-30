@@ -6,13 +6,14 @@ class Fraction(object):
             raise TypeError
 
     def gcd(a, b):
-        a = b % a
 
         if a == 0 and b == 0:
             return 0
 
         if b == 0:
             return a
+        
+        a = b % a
         
         return Fraction.gcd(a, b % a)
 
