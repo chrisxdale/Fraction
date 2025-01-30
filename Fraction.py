@@ -9,7 +9,10 @@ class Fraction(object):
             numbers = numerator.strip().split("/")
 
             if len(numbers) == 2:
-                pass
+                if not numbers[0].strip("-").isnumeric() or not numbers[1].strip("-").isnumeric():
+                    self.valid = False
+                else:
+                    pass
             else:
                 self.valid = False
         else:
