@@ -2,6 +2,8 @@ class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
         #TODO
+        if not isinstance(numerator, int) and not isinstance(denominator, int):
+            raise TypeError
         pass
 
     def gcd(a, b):
