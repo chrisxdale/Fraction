@@ -35,7 +35,12 @@ class Fraction(object):
         if self.valid:
             self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
 
-    def gcd(a, b): 
+    def gcd(a, b):
+        '''     
+        @fn gcd
+        @brief returns the greatest common denominator of the two numbers
+
+        ''' 
 
         if a == 0 or b == 0:
             return 0
