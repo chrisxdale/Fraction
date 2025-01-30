@@ -28,8 +28,13 @@ class Fraction(object):
         return str( self.denominator / self.greatest_common_divisor)
     
     def get_fraction(self):
-        if self.get_denominator() == "1":
-            return self.get_numerator()
+        
+        str_numerator = self.get_numerator()
+        str_denominator = self.get_denominator()
+        
+        if str_denominator == "1":
+            return str_numerator
+            
         if self.denominator < 0:
             if self.numerator > 0:
                 return "-" + self.get_numerator() + "/" + self.get_denominator()[1:]
