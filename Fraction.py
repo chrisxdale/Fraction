@@ -37,6 +37,7 @@ class Fraction(object):
         #if the given is a string fraction already
         if isinstance(numerator, str):
             numbers = numerator.strip().split("/")
+            self.numerator, self.denominator = numbers
 
             if len(numbers) == 2:
                 if not numbers[0].strip("-").isnumeric() or not numbers[1].strip("-").isnumeric():
