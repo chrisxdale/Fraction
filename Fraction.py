@@ -40,14 +40,9 @@ class Fraction(object):
             self.numerator, self.denominator = numbers
 
             if len(numbers) == 2:
-                if not numbers[0].strip("-").isnumeric() or not numbers[1].strip("-").isnumeric():
+                if not self.numerator.strip("-").isnumeric() or not self.denominator.strip("-").isnumeric() or self.denominator == 0:
                     self.valid = False
-                else:
-                    self.numerator = int(numbers[0])
-                    self.denominator = int(numbers[1])
-
                     if self.denominator == 0:
-                        self.valid = False
                         raise ZeroDivisionError
             else:
                 self.valid = False
