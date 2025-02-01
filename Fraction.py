@@ -78,14 +78,14 @@ class Fraction(object):
         @param a numerator
         @param b denominator
 
-        ''' 
+        '''
         # Return zero if the numerator or denominator is 0
         if a == 0 or b == 0:
             return 0
 
         if a % b == 0:
             return b
-        
+
         # Recursively call the gcd function up until a % b is equal to 0 to get the numbers' gcd
         return Fraction.gcd(b, a % b)
 
