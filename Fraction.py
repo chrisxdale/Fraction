@@ -39,24 +39,21 @@ class Fraction(object):
             try:
                 numbers = map(int, numerator.strip().split("/"))
                 self.numerator, self.denominator = numbers
-                if self.denominator == 0:
-                    raise ZeroDivisionError
             except ValueError:
                 self.valid = False
-        else:
-            if not isinstance(numerator, int) or not isinstance(denominator, int):
-                self.valid = False
 
-            else:
+        else:
+            if isinstance(numerator, int) and isinstance(denominator, int):
                 self.numerator = numerator
                 self.denominator = denominator
-
-                if self.denominator == 0:
-                    self.valid = False
-                    raise ZeroDivisionError
+            else:
+                self.valid = False
 
         if self.valid:
-            self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
+            if self.denominator != 0:
+                self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
+            else:
+                raise ZeroDivisionError
 
     def gcd(a, b):
         '''     
