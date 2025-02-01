@@ -46,7 +46,7 @@ class Fraction(object):
         # Checks if the input is a string, a potential Fraction
         if isinstance(numerator, str):
             try:
-                # Split the string into a list separating the numerator and denominator
+                # Split the string into a tuple separating the numerator and denominator
                 numbers = map(int, numerator.strip().split("/"))
                 self.numerator, self.denominator = numbers
 
