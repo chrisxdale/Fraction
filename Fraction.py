@@ -153,4 +153,5 @@ class Fraction(object):
         if denominator < 0:
             numerator = -numerator
             denominator = -denominator
+
         return str(numerator) + "/" + str(denominator)
