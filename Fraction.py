@@ -107,25 +107,20 @@ class Fraction(object):
         if not self.valid:
             return "0"
         
-        str_numerator = self.get_numerator()
-        str_denominator = self.get_denominator()
+        numerator = int(self.get_numerator())
+        denominator = int(self.get_denominator())
         
-        if str_denominator == "1":
-            return str_numerator
+        if denominator == 1:
+            return self.get_numerator()
         
-        if str_numerator == "0":
+        if numerator == 0:
             return "0"
         
-        if str_denominator == "-1":
-            if int(str_numerator) < 0:
-                return str_numerator[1:]
-            return "-" + str_numerator
-            
-        if int(str_denominator) < 0:
-            if int(str_numerator) > 0:
-                str_denominator = str_denominator[1:]
-                str_numerator = "-" + str_numerator
-            else:
-                str_numerator = str_numerator[1:]
+        if denominator == -1:
+            return str(-numerator)
                 
-        return str_numerator + "/" + str_denominator
+        if denominator < 0:
+            numerator = -numerator
+            denominator = -denominator
+
+        return str(numerator) + "/" + str(denominator)
