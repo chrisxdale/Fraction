@@ -91,6 +91,8 @@ class Fraction(object):
         is 0 else returns the lowest form of the denominator
 
         '''
+        # This checks whether the fraction is a not a valid fraction or if the greatest 
+        # common divisor is equal to 0 which returns 0 if one is true
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
         
