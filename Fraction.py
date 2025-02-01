@@ -96,9 +96,11 @@ class Fraction(object):
         is 0 else returns the lowest form of the numerator
 
         '''
+        # This checks whether the fraction is a not a valid fraction or if the greatest
+        # common divisor is equal to 0 which returns 0 if one is true
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
-        
+
         return str( self.numerator // self.greatest_common_divisor)
 
     def get_denominator(self):
@@ -108,11 +110,13 @@ class Fraction(object):
         is 0 else returns the lowest form of the denominator
 
         '''
+        # This checks whether the fraction is a not a valid fraction or if the greatest
+        # common divisor is equal to 0 which returns 0 if one is true
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
-        
+
         return str( self.denominator // self.greatest_common_divisor)
-    
+
     def get_fraction(self):
         '''     
         @fn get_fraction
@@ -121,23 +125,32 @@ class Fraction(object):
         numerator / denominator
 
         '''
+        # This checks whether the fraction is a valid fraction before
+        # proceeding with getting the fraction
         if not self.valid:
             return "0"
-        
+
         numerator = int(self.get_numerator())
         denominator = int(self.get_denominator())
-        
+
+        # This returns the string of numerator if the denominator is 1 since
+        # dividing by 1 is just the number itself
         if denominator == 1:
             return self.get_numerator()
-        
+
+        # This returns the string of numerator if the denominator is 1 since
+        # dividing by 1 is just the number itself
+
         if numerator == 0:
             return "0"
-        
+
+        # This returns the negative string of numerator if the denominator is -1
         if denominator == -1:
             return str(-numerator)
-                
+
+        # This negates the numerator and denominator if the denominator is negative
+        # to account for the sign position switching if the numerator is originally positive
         if denominator < 0:
             numerator = -numerator
             denominator = -denominator
-
         return str(numerator) + "/" + str(denominator)
