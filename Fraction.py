@@ -28,6 +28,10 @@ the lowest term fraction from a given fraction or creates a fraction given
 two integers
 """
 class Fraction(object):
+    '''
+    @authors : Gregorio Delfin Pascua, Antonth Chrisdale Lopez
+
+    '''
 
     def __init__(self, numerator=0, denominator=1):
 
