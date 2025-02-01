@@ -1,7 +1,7 @@
 # Gregorio Delfin P. Pascua
 # 234835
 #
-# Antonth Chrisdale C. Lopez 
+# Antonth Chrisdale C. Lopez
 # 233714
 #
 # January 30, 2025
@@ -27,29 +27,45 @@ This module implements functions that gets the numerator, denominator, and
 the lowest term fraction from a given fraction or creates a fraction given
 two integers
 """
-
 class Fraction(object):
+    '''
+    @authors : Gregorio Delfin Pascua, Antonth Chrisdale Lopez
 
+    '''
     def __init__(self, numerator=0, denominator=1):
+        '''     
+        @fn __init__
+        @brief initializes the numerator and denominator of the input 
+        aswell as their greatest common divisor.
+        @param numerator, input may be a fraction if given as a string
+        @param denominator, if none; denominator is 1
 
+        '''
         self.valid = True
 
-        #if the given is a string fraction already
+        # Checks if the input is a string, a potential Fraction
         if isinstance(numerator, str):
             try:
+                # Split the string into a tuple separating the numerator and denominator
                 numbers = map(int, numerator.strip().split("/"))
                 self.numerator, self.denominator = numbers
+
+            # Throw a ValueError if numbers is not an integer
+            # or if numbers aren't mapped into a numerator and denominator
             except ValueError:
                 self.valid = False
 
         else:
+            # Checks if the numerator and denominator is an integer
             if isinstance(numerator, int) and isinstance(denominator, int):
                 self.numerator = numerator
                 self.denominator = denominator
             else:
                 self.valid = False
 
+        # It is valid to be a fraction if the numerator and denominator are integers.
         if self.valid:
+            # If the denominator is 0, it raises a ZeroDivisionError as division by 0 is undefined.
             if self.denominator != 0:
                 self.greatest_common_divisor = Fraction.gcd(self.numerator, self.denominator)
             else:
@@ -63,13 +79,14 @@ class Fraction(object):
         @param b denominator
 
         ''' 
-
+        # Return zero if the numerator or denominator is 0
         if a == 0 or b == 0:
             return 0
 
         if a % b == 0:
             return b
         
+        # Recursively call the gcd function up until a % b is equal to 0 to get the numbers' gcd
         return Fraction.gcd(b, a % b)
 
     def get_numerator(self):
