@@ -32,9 +32,15 @@ class Fraction(object):
     @authors : Gregorio Delfin Pascua, Antonth Chrisdale Lopez
 
     '''
-
     def __init__(self, numerator=0, denominator=1):
+        '''     
+        @fn __init__
+        @brief initializes the numerator and denominator of the input 
+        aswell as their greatest common divisor.
+        @param numerator, input may be a fraction if given as a string
+        @param denominator, if none; denominator is 1
 
+        '''
         self.valid = True
 
         # Checks if the input is a string, a potential Fraction
@@ -57,7 +63,7 @@ class Fraction(object):
             else:
                 self.valid = False
 
-        # It is valid if the numerator and denominator are integers.
+        # It is valid to be a fraction if the numerator and denominator are integers.
         if self.valid:
             # If the denominator is 0, it raises a ZeroDivisionError as division by 0 is undefined.
             if self.denominator != 0:
