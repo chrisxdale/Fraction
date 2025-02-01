@@ -127,7 +127,10 @@ class Fraction(object):
             return "0"
         
         if int_denominator == -1:
-            return str(int_numerator * -1)
+            return str(-int_numerator)
                 
         if int_denominator < 0:
-            return str(int_numerator * -1) + "/" + str(int_denominator)
+            int_numerator = -int_numerator
+            int_denominator = -int_denominator
+            
+        return str(int_numerator) + "/" + str(int_denominator)
