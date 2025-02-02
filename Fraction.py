@@ -101,7 +101,7 @@ class Fraction(object):
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
 
-        return str( self.numerator // self.greatest_common_divisor)
+        return str(self.numerator // self.greatest_common_divisor)
 
     def get_denominator(self):
         '''     
@@ -115,7 +115,7 @@ class Fraction(object):
         if not self.valid or self.greatest_common_divisor == 0:
             return "0"
 
-        return str( self.denominator // self.greatest_common_divisor)
+        return str(self.denominator // self.greatest_common_divisor)
 
     def get_fraction(self):
         '''     
